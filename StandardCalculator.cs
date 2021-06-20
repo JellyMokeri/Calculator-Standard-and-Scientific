@@ -20,24 +20,8 @@ namespace CalculatorApp
         private void Form1_Load(object sender, EventArgs e) // подгон размера кнопок под растягивание окна калькулятора
         {
             this.MinimumSize=new Size(280, 485); // устанавливает минимальный размер формы
-            panel1_Resize(sender, e);
             panel2_Resize(sender, e);
             panel3_Resize(sender, e);
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel1_Resize(object sender, EventArgs e)
-        {
-
         }
 
         private void panel2_Resize(object sender, EventArgs e)
@@ -169,7 +153,7 @@ namespace CalculatorApp
                 textBox1.Text = "";
             }
 
-            if (textBox1.Text.IndexOf(".") > 0 && b.Text == ".")// если уже нажата точка, то не нажимает снова
+            if (textBox1.Text.IndexOf(".") > 0 && b.Text == ".") // если уже нажата точка, то не нажимает снова
             {
                 return; // ничего не набирает
             }
